@@ -50,9 +50,10 @@ public class Main {
 
     public static int countDeliveryTime(int distance) {
         int deliveryTime = 0;
-        if (distance < 20) deliveryTime += 1;
-        if (distance < 60) deliveryTime += 2;
-        if (distance <= 100) deliveryTime += 3;
+        if (distance > 0) deliveryTime++;
+        if (distance >= 20) deliveryTime++;
+        if (distance >= 60) deliveryTime++;
+        if (distance > 100) deliveryTime = 0;
         return deliveryTime;
     }
 
